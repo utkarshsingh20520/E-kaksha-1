@@ -1,0 +1,79 @@
+
+
+
+{% extends "blog/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block css %}
+
+.profile
+{
+width: 100%;
+height: 250px;
+padding-top: 300px;
+background-image: url('https://cdn.pixabay.com/photo/2015/03/26/09/44/books-690219__340.jpg');
+background-repeat: no-repeat;
+background-size: 100% 185%;
+background-position: center;
+}
+
+.profile h1{
+   font-size:50px;
+   font-weight: 800;
+   letter-spacing: 5px;
+   text-align: center;
+   font-family: 'Ranchers', cursive;
+   color: white;
+   padding:-20px;
+
+}
+
+.register-box{
+   background-image: url({% static 'blog/pico.png' %});
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 100%;
+}
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid bg-primary profile ">
+  <h1>Register</h1>
+</div>
+<div class="container">
+<div class="row py-5 my-5">
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12  register-box">
+
+
+    </div>
+
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 p-5">
+       <div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form_group">
+            <legend class="bord er_bottom mb-4">Join Today</legend>
+            {{form|crispy}}
+        </fieldset>
+        <div class="form_group">
+            <button class="btn btn-outline-info" type="submit">Sign Up</button>
+        </div>
+    </form>
+    <div class="border_top pt-3">
+        <small class="text_muted">
+            Already have an account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+        </small>
+    </div>
+</div>
+</div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

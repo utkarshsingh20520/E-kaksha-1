@@ -1,0 +1,279 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Sora:wght@700&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+   {% if title %}
+      <title> Django vlog - {{title}}</title>
+      {% else %}
+      <title> Django Vlogs</title>
+      {% endif %}
+  </head>
+  <style>
+      .navbar{
+      background-color:rgba(0,0,0,.2)
+    }
+
+    .navbar-brand{
+    font-size: 35px;
+    font-weight: 800;
+    color: #211bc4;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-family: 'Ranchers', cursive;
+  }
+  .navbar-toggler{
+    border: 4px  solid black;
+    border-color: black;
+
+  }
+  .nav-item{
+    text-align: center;
+    font-size: 20px;
+    color: #211bc4;
+    letter-spacing: 2px;
+    font-family: 'Sora', sans-serif;
+    width: 120px;
+
+
+  }
+  
+
+
+      {% block css %}{% endblock %}
+  </style>
+  <body>
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-{{message.tags}} my-2">
+      {{message}}
+  </div>
+  {% endfor %}
+  {% endif %}
+  <div class="container-fluid my-1">
+    <header >
+    <nav class="navbar  navbar-expand-lg  scrolling-navbar " style="background-color: rgba(255, 255, 255,0.0);">
+      <div class="container">
+
+        <img src="{% static 'blog/logo.png' %}" style="width:120px;height:120px">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto ">
+      {% if user.is_authenticated %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'blog-home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'blog-about' %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Create</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+      </li>
+
+
+      {% else %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'blog-home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'blog-about' %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'register' %}">Register</a>
+      </li>
+     {% endif %}
+
+    </ul>
+
+  </div>
+</div>
+</nav>
+</header>
+  </div>
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+  <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark bg-dark pt-4 " style="margin-top: 20px;">
+
+  <!-- Footer Links -->
+  <div class="container text-center bg-dark text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <div class="row">
+          <div class="col-lg-12">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: white;font-size: 20px;">About us</h5>
+          </div>
+          <div class="col-lg-12">
+            <p style="text-decoration: none;color: white;">We are a group of four highly enthusastic students of KIET Group of Institutions who believe in solving society problems through their technology skills. We are from different branches but we stil came together to form life changing projects.</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: white;font-size: 20px;">Features</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="text-decoration: none;color: white;">Attendence</a>
+          </li>
+          <li>
+            <a href="#!" style="text-decoration: none;color: white;">Whiteboard</a>
+          </li>
+          <li>
+            <a href="#!" style="text-decoration: none;color: white;">Discipline Manager</a>
+          </li>
+          <li>
+            <a href="#!" style="text-decoration: none;color: white;">Fixed Window</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: white;font-size: 20px;">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.kiet.edu/" target="_blank" style="text-decoration: none;color: white;">KIET Official Website</a>
+          </li>
+          <li>
+            <a href="https://www.kiet.edu/" target="blank"  style="text-decoration: none;color: white;">KIET Youtube</a>
+          </li>
+          <li>
+            <a href="#!" style="text-decoration: none;color: white;">KIET Instagram</a>
+          </li>
+          <li>
+            <a href="#!" style="text-decoration: none;color: white;">KIET Facebook</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold"style="color: white;font-weight: bold;margin-top: 15px;font-size: 20px; font-family: 'Libre Baskerville', serif;">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p style="color: white;">
+          <i class="fas fa-home mr-3" style="color: white;"></i> KIET Grop Of Institutions, Ghaziabad</p>
+        <p style="color: white;">
+          <i class="fas fa-envelope mr-3" style="color: white;"></i> utkarsh2052000.com</p>
+        <p style="color: white;">
+          <i class="fas fa-phone mr-3" style="color: white;"></i> + 91 7054246828</p>
+        <p style="color: white;">
+          <i class="fas fa-print mr-3" style="color: white;"></i> + 91 6392771770</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <hr>
+  <!-- Footer Links -->
+  <div class="container-fluid text-center py-1 bg-dark"style="color: white;">
+  <a href="#" title="To Top">
+    <i class='fas fa-angle-up' style='font-size:30px; color: white;'></i>
+  </a>
+  <div>
+  <hr>
+
+
+
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center margin-10px">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1">
+        <i class="fab fa-facebook" style="color: darkblue;font-size: 40px;"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1">
+        <i class="fab fa-twitter" style="color: blue;font-size: 40px;"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-gplus mx-1">
+        <i class="fab fa-google-plus-g" style="color: red;font-size: 40px;"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1">
+        <i class="fab fa-linkedin-in" style="color: darkblue;font-size: 40px;"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-dribbble mx-1">
+        <i class="fab fa-dribbble" style="color: pink;font-size: 40px;"> </i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+<hr>
+<!-- Copyright -->
+  <div class="footer-copyright text-center py-3 bg-dark"style="color: white;">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> KietExchangeportal.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+  </body>
+</html>
+

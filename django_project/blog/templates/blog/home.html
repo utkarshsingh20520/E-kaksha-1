@@ -1,0 +1,679 @@
+
+{% extends "blog/base.html" %}
+{% load static %}
+{% block css %}
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Serif&display=swap');
+
+.navbar
+{
+      background-color:rgba(0,0,0,.2)
+    }
+
+    .navbar-brand{
+    font-size: 35px;
+    font-weight: 800;
+    color: #211bc4;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-family: 'Ranchers', cursive;
+  }
+  .navbar-toggler{
+    border: 4px  solid black;
+    border-color: black;
+
+  }
+  .nav-item{
+    text-align: center;
+    font-size: 20px;
+    color: #211bc4;
+    letter-spacing: 2px;
+    font-family: 'Sora', sans-serif;
+
+
+  }
+     .bgimage {
+      background-image: url("{% static 'blog/main1.png' %}");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 240px;
+
+
+
+      }
+
+      .fadeIn{
+        font-weight: 800;
+        color: black;
+        padding-left:100px;
+      }
+      .fadeIn h1{
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 100px;
+        color:black;
+      }
+      .fadeIn p{
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 30px;
+         color:black;
+      }
+      .fadeIn button{
+        border: 2px solid darkblue;
+        margin-top: 5px;
+      }
+
+     .title{
+      color: black;
+      font-size: 30px;
+      font-family: 'Sora', sans-serif;
+     }
+     .subtitle{
+
+      font-size: 20px;
+      font-family: 'Sora', sans-serif;
+     }
+     .title .subtitle hover:{
+          color: blue;
+     }
+     .preview a {
+      text-decoration: none;
+
+     }
+
+
+     a:link { color: : black; text-decoration: none; font-weight: bold }
+     a:visited { color: black; text-decoration: none; font-weight: bold }
+     a:active { color: black; text-decoration: none }
+     a:hover { color: blue; text-decoration: none; font-weight: bold }
+
+.btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.btn-primary {
+  background-color: #0085A1;
+  border-color: #0085A1;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: white;
+  background-color: #00657b !important;
+  border-color: #00657b !important;
+}
+
+ .contact12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: rgba(91, 100, 115,0.0);
+    font-family: 'poppins', sans-serif;
+  }
+
+.card1{
+  position: relative;
+  background: rgba(115, 120, 128,0.0);
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);
+  
+  
+}
+
+
+
+
+.card1  .slidertext h3{
+  color: #fff;
+  font-size: 3em;
+}
+.swiper-slide{
+  width: 400px;
+
+}
+.teamsec{
+
+      height: 500px;
+      padding: 10px;
+      margin: 15px;
+      border: 1px lightgrey;
+        padding: 10px;
+
+
+    }
+    .imgc{
+      width: 100%;
+      height: 130px;
+    }
+    .imgc img{
+      width: 120px;
+      height:130px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    
+  
+     
+.cover {
+  width: 100%;
+  height: 55vmin;
+  background: url("{% static 'blog/contact1.png' %}");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.cntct3{
+  width: 100%;
+
+}
+ 
+.cover .overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.cover .content1 {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 19vmin;
+}
+
+.cover .content1 > h1 {
+  font-family: var(--Patua);
+  font-size: 40px;
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.cover .content1 > p {
+  font-family: var(--Rubik);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #e5e5e5;
+}
+.numbers {
+  margin-top: -13vmin;
+  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+}
+
+
+     .cntct2{
+      padding: 40px;
+      height: 490px;
+      
+      background-color: white;
+      
+       width: 100%;
+         height: 490px;
+         background-size: cover;
+         background-repeat: no-repeat;
+          background-position: center;
+      }
+     @media (max-width: 991px) and (min-width: 768px){
+
+     .cntct3{
+       width: 100%;
+     }
+     .cntct2{
+      padding: 40px;
+      height: 540px;
+      
+      
+      background-color: white;
+       width: 100%;
+         height: 540px;
+         background-size: cover;
+         background-repeat: no-repeat;
+          background-position: center;
+      }
+       .numbers {
+           margin-top: -10vmin;
+           box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+           width: 100%;
+               }
+
+        .cover .content1 > p {
+            font-family: var(--Rubik);
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 2px;
+            color: #e5e5e5;
+          }
+
+     }
+     
+
+     @media (max-width: 768px){
+     
+     .cntct3{
+       width: 100%;
+     }
+      
+     .cntct2{
+      padding: 40px;
+      height: 540px;
+      
+      
+      background-color: white;
+       width: 100%;
+         
+         background-size: cover;
+         background-repeat: no-repeat;
+          background-position: center;
+      }
+
+       .numbers {
+           margin: 0vmin;
+           
+           -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+               }
+
+        .cover .content1 > p {
+            font-family: var(--Rubik);
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 2px;
+            color: #e5e5e5;
+          }
+     }
+
+
+
+.page-footer h5{
+  font-family: 'Libre Baskerville', serif;
+    letter-spacing: 1px;
+  word-spacing: 2px;
+}
+.page-footer li a{
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+.page-footer p{
+  font-family: 'Libre Baskerville', serif;
+    letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="bgimage" style="margin-top:-150px;">
+      <div class="mask rgba-black-light ">
+
+      <!-- Content -->
+      <div class=" my-3 fadeIn  container" >
+        <h1 class="mb-4" style="font-weight:bold;font-family: 'Sora', sans-serif;" >
+          E-Kaksha
+        </h1>
+
+        <p>
+          Online Video Classroom
+        </p>
+
+
+       {% if user.is_authenticated %}
+         <p class="mb-4 d-none d-md-block">
+          <strong>Login Yourself and get Started</strong>
+        </p>
+        <a class="btn btn-primary " href="{% url 'blog-join' %}">Join classes</a>
+        {% else %}
+         <p class="mb-4 d-none d-md-block">
+          <strong>Join the class Now</strong>
+        </p>
+        <a class="btn btn-primary " href="{% url 'register' %}">Sign Up Now</a>
+        {% endif %}
+      <!-- Content -->
+
+    </div>
+
+    </div>
+  </div>
+  <!-- Page Header -->
+
+
+<div class="container my-5">
+
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <h1 style="font-weight:bold;font-family: 'Sora', sans-serif;  font-size: 60px;text-align: center; color: black">Our Services</h1>
+        <hr>
+
+      
+           <p class="p-5" style="font-family: 'Montserrat'; text-align: center; font-size: 20px; ">The moto of our team is to provide a better environment for both teachers and students so that they can carry out their education in this Covid Pandemic Time. For this we made this <strong>E-Kaksha</strong> which is the solution of various day to day problems faced by teachers abd students. Our top priority is to provide an online virtual environment where an online classes can be held smoothly and in disciplined manner. 
+           </p>
+      </div>
+      <div class="col-md-6 col-lg-6" style="background-image: url({% static 'blog/services.png' %}); background-repeat: no-repeat; background-position: center;background-size: 100% 100%;">
+        
+
+    </div>
+</div>
+
+</div>
+<div class="Feature container my-5  "><h1 style="font-weight:bold;font-family: 'Sora', sans-serif;  font-size: 60px;text-align: center; color: black">Additional Features</h1></div>
+<div class="container-fluid team m-0 p-0" style="margin-top:  230px; margin-left:0px;margin-right: 0px">
+    
+  <div class="container-fluid contact12">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+    <div class="card1" >
+      <div class=" teamsec" >
+          <div class="row justify-content-center row1">
+            <div class="col-lg-12 imgc">
+              <img src="{% static 'blog/test.jpeg' %}">
+            </div>
+            <div class="col-lg-12 text-center"><p style="font-weight:bold;font-family: 'Fjalla One'; font-size: 30px;text-align: center; color: black">Smart Quiz/Test</p></div>
+
+            <div class="col-lg-12">
+              <p style="text-align: center;font-weight:bold;font-family: 'Fjalla One';">
+                In this a quiz will be shared by the teachers and student will have to 
+                complete that quiz in the given time. Here in this platform teacher can take written test also as a student can write the anwers through the whiteboard provided. 
+                </p>
+
+            </div>
+
+            </div>
+
+          </div>
+
+          </div>
+    </div>
+   
+   <div class="swiper-slide">
+    <div class="card1" >
+      <div class=" teamsec" >
+          <div class="row justify-content-center row1">
+            <div class="col-lg-12 imgc">
+              <img src="{% static 'blog/robot.jpeg' %}">
+            </div>
+            <div class="col-lg-12 text-center"><p style="font-weight:bold; font-family: 'Libre Baskerville', serif;  font-size: 30px;text-align: center; color: black">Discipline Monitor </p></div>
+            <div class="col-lg-12">
+              <p style="text-align: center;font-weight:bold;font-family: 'Noto Serif', serif;">
+                In various online classes we watch that student do mischieveous things like saying unwanted words or doing whispering which affects the discipline of a class. So to avoid this situation we will install a speech recognition system through which each member along with host voices are recorded along with the name and time so that a teacher can easily find out  who speaks. 
+                Along this way notes will also be formed which can be downloaded by the students.
+                </p>       
+            </div>
+          </div>
+
+          </div>
+    </div>
+   </div>
+   <div class="swiper-slide">
+    <div class="card1">
+      <div class=" teamsec" >
+          <div class="row justify-content-center row1">
+            <div class="col-lg-12 imgc">
+              <img src="{% static 'blog/Attendance.jpeg' %}">
+            </div>
+            <div class="col-lg-12 text-center"><p style="font-weight:bold;  font-family: 'Libre Baskerville', serif; font-size: 30px;text-align: center; color: black">Automatic Attendance</p></div>
+
+             <div class="col-lg-12">
+               <p style="font-weight:bold; font-family: 'Noto Serif', serif;text-align: center;">Here in this class room an attendance will be taken automatically through various factors which are given below:
+                  <ul>
+                    <li style="font-family: 'Noto Serif', serif;">No of minutes you are present in the classroom</li>
+                    <li style="font-family: 'Noto Serif', serif;">A given no of alert will be generated in between the class and there will be a time of 10 seconds for a student to respond.</li>
+                    <li style="font-family: 'Noto Serif', serif;">No of minutes the Mike or Video of a student is opened.</li>
+                  </ul>
+               </p>
+             </div>          
+            
+          </div>
+
+          </div>
+    </div>
+   </div>
+   <div class="swiper-slide">
+    <div class="card1">
+      <div class=" teamsec" >
+          <div class="row justify-content-center row1">
+            <div class="col-lg-12 imgc">
+              <img src="{% static 'blog/whiteboard.jpeg' %}">
+            </div>
+            <div class="col-lg-12 text-center"><p style="font-weight:bold; font-family: 'Libre Baskerville', serif; font-size: 30px;text-align: center; color: black">Smart Whiteboard</p></div>
+              <div class="col-lg-12">
+                <p style="font-weight:bold;font-family: 'Noto Serif', serif;font-size: 17px;text-align: center;">
+                There will be smart whiteboard in which shape recognition system will be pre installed so that when a teacher writes something on the board it will automatically predict the character and update in a pdf. In this way the notes are easily readable and can be distributed among students.
+                A seperate Whiteboard will be provided to both students and teachers.
+                And a teacher has a right to open any students whiteboard without their permisson.
+              </p>
+              </div>         
+            
+          </div>
+
+          </div>
+    </div>
+   </div>
+   <div class="swiper-slide">
+    <div class="card1">
+      <div class=" teamsec" >
+          <div class="row justify-content-center row1">
+            <div class="col-lg-12 imgc">
+              <img src="{% static 'blog/window.jpeg' %}">
+            </div>
+            <div class="col-lg-12 text-center"><p style="font-weight:bold;  font-family: 'Libre Baskerville', serif; font-size: 30px;text-align: center; color: black;text-align: center;">Fixed Window</p></div>
+               <div class="col-lg-12">
+                <p style="font-weight:bold; font-family: 'Noto Serif', serif;  font-size: 17px;text-align: center;">
+                  We see in most of the cases when a student is taking classes a different webpages and games are opened alongwith, which distract the student attention, so in order to solve this problem we will run our classroom in a fixed window where no other tabs  can be open and if you want to watch other tabs then you have to exit from the classroom.
+                </p>
+               </div>        
+            
+          </div>
+
+          </div>
+    </div>
+   </div>
+</div>
+</div>
+</div></div>
+
+ <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+  
+
+<div class="container-fluid " style="margin-top: 80px;margin-bottom: 50px;">
+  <div class="Security container "><h1 style="font-weight:bold;font-family: 'Sora', sans-serif;  font-size: 60px;text-align: center; color: black">Security</h1></div>
+  <hr class="my-5" style="width: 40%; text-align: center;height: 2px;">
+ <div class="container">
+<div class="row">
+  <div class="col-lg-6 ">
+      <p style="font-weight:bold;  font-family: 'Noto Serif', serif;  font-size: 30px;text-align: center;">We had provided various security options to conduct the easy going of a classroom. Here are some of them provided.</p>
+        <ul class="p-5">
+          <li style="font-family: 'Noto Serif', serif;  font-size: 21px; font-weight:bold;">A two types of account can be formed, One for host and one for attende.</li>
+          <li style="font-family: 'Noto Serif', serif;  font-size: 21px; font-weight:bold;">Account formed with attende role can never be a presenter.</li>
+          <li style="font-family: 'Noto Serif', serif;  font-size: 21px; font-weight:bold;">Account will be formed through valid college email id</li>
+          <li style="font-family: 'Noto Serif', serif;  font-size: 21px; font-weight:bold;">A verification mail will be sent to verify the Id</li>
+          <li style="font-family: 'Noto Serif', serif;  font-size: 21px; font-weight:bold;">A student information will not be disclosed to anyone except a teacher</li>
+        </ul>
+      </p>
+  </div>
+  <div class="col-lg-6">
+    <img src="{% static 'blog/scrty1.png' %}" style="width: 500px;height: 450px; display: block;  margin-left: auto;  margin-top: 30px">
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid my-5 p-5 bg-dark">
+  <div class="col-lg-12">
+    <p style="color: white;font-weight: bold;font-size: 50px;text-align: center;letter-spacing: 2px;word-spacing: 4px; font-family: 'Sora', sans-serif;">What are you waiting for</p>
+  </div>
+   <div class="row my-1">
+     <div class="col-lg-6 p-3">
+       <a class="btn btn-primary " href="#" style="float: right; font-family: 'Noto Serif', serif;">Join a Class</a>
+     </div>
+     <div class="col-lg-6 p-3">
+       <a class="btn btn-primary " href="#" style="font-family: 'Noto Serif', serif;">Host a Class</a>
+     </div>
+   </div>
+
+  </div>
+
+<div class="container-fluid" style="margin-top: 80px;margin-bottom: 50px;">
+ <div class="teamh container my-5  "><h1 style="font-weight:bold;font-family: 'Fjalla One'; font-size: 60px;text-align: center; color: black; font-family: 'Sora', sans-serif;">Meet the Team</h1></div>
+ <hr class="my-4">
+  <div class="row my-5">
+    <div class="col-lg-3 justify-content-center">
+      <img src="{% static 'blog/akku.jpg' %}" style="width: 230px;height: 230px; border-radius:50%; text-align:center; display: block;
+  margin-left: auto;  margin-right: auto;box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);">
+    </div>
+    <div class="col-lg-3">
+      <img src="{% static 'blog/anubhav.jpeg' %}" style="width: 230px;height: 230px; border-radius:50%; text-align:center;display: block;  margin-left: auto;
+  margin-right: auto;box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);">
+    </div>
+    <div class="col-lg-3">
+      <img src="{% static 'blog/uttu.jpg' %}" style="width: 230px;height: 230px; border-radius:50%; text-align:center;display: block;  margin-left: auto;
+  margin-right: auto;box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);">
+    </div>
+    <div class="col-lg-3">
+      <img src="{% static 'blog/anshuman.jpeg' %}" style="width: 230px;height: 230px; border-radius:50%; text-align:center;display: block;  margin-left: auto;
+  margin-right: auto;box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);">
+    </div>
+  </div>
+
+  <div class="row my-1">
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 25px;font-family: 'Noto Serif', serif;">Akashdeep Gupta</p>
+    </div>
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 25px;font-family: 'Noto Serif', serif;">Anubhav Kulshrestha</p>
+    </div>
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 25px;font-family: 'Noto Serif', serif;">Utkarsh Singh</p>
+    </div>
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 25px;font-family: 'Noto Serif', serif;">Anshuman Shukla</p>
+    </div>
+  </div>
+
+  <div class="row my-1">
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 20px;font-family: 'Noto Serif', serif;">Data Scientist</p>
+    </div>
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 20px;font-family: 'Noto Serif', serif;">Full-Stack Developer</p>
+    </div>
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 20px;font-family: 'Noto Serif', serif;">Full-Stack Developer</p>
+    </div>
+    <div class="col-lg-3">
+      <p style="color: black;text-align: center;font-weight: bold; font-size: 20px;font-family: 'Noto Serif', serif;">Graphical Lead</p>
+    </div>
+  </div>
+</div>
+
+
+  
+<section class="section-2 container-fluid p-0 ">
+      <div class="cover">
+        <div class="overlay1"></div>
+        <div class="content1 text-center">
+          <h1 class="my-2">Contact Us</h1>
+          <p>
+            If You have any suggestion regarding any enhancement and update, feel free to share with us....
+          </p>
+        </div>
+      </div>
+      <div class=" text-center container" style="display: flex; justify-content: center;">
+        <div class="cntct3 mx-0 container-fluid ">
+
+        <form method="POST" action="/contact/">
+               {% csrf_token %}
+
+
+        <div class=" col-lg-12 cntct2 numbers">
+          <div class="row"  style="margin-bottom: 20px;">
+            <div class="col-lg-12 "><h1  style=" font-size: 30px; font-weight: bold;  ">
+            Send Us a message</h1></div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-4 col-md-12">
+              <p><strong>Name</strong></p>
+            </div>
+            <div class="col-lg-8 col-md-12 form-group">
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <p><strong>Email</strong></p>
+            </div>
+            <div class="col-lg-8 col-md-12 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <p><strong>Comment</strong></p>
+            </div>
+            <div class="col-lg-12 col-md-12 form-group">
+              <textarea class="form-control" id="message" name="message" placeholder="message"
+              rows="5"></textarea>
+            </div>
+            <br>
+
+            <div class="col-md-12 form-group " >
+                       <div class="g-recaptcha my-2" data-sitekey="6LdM9awZAAAAAOnGpxgvPCnCUULCgnDqtzba6Dxe"></div>
+                       <button class="btn btn-dark btn-lg btn-block " type="submit" style="margin-bottom:10px;">Send</button>
+
+                    </div>
+          </div>
+
+
+        </div>
+      </form>
+      </div>
+      </div>
+
+
+</section>
+
+
+
+
+
+{% endblock content %}
