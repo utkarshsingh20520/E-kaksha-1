@@ -1,3 +1,3 @@
 # E-kaksha
-online virtual environment where an online classes can be held smoothly and in disciplined manner.
+This is an online Classroom with more enhanced features so that online classes can run smoothly. Its work is still pending .
 
